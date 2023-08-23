@@ -7,3 +7,5 @@ run: build
 test: 
 	@go test -v ./...
 
+pg:
+	@docker run --name bankpg -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres
